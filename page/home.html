@@ -1,0 +1,23 @@
+<header class="header">
+    <i class="fa fa-angle-left left"> 返回</i>
+    食堂点餐
+    <i class="fa fa-align-right right"></i>
+</header>
+<section class="section">
+<div class="left" >
+    <p class="p" ng-repeat="x in data" ng-click="tab(x)" ng-class="{'active':x.active}">{{x.title}}</p>
+</div>
+<div class="right">
+    <div ng-repeat="x in content" class="cont">
+        <div>
+            <h3>{{x.head}}</h3>
+            <p>{{x.money}}</p>
+            <i class="ii fa fa-circle-o" ng-class="{'fa-check-circle-o':x.flag,'fa-circle-o':!x.flag}" ng-click="checked(x.flag,$index)"></i>
+        </div>
+
+    </div>
+</div>
+</section>
+<footer class="footer">
+    购物车 {{count}}
+</footer>
